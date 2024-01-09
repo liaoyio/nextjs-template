@@ -9,7 +9,10 @@
     "preview": "next build && next start",
     "lint": "next lint",
     "fmt:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
-    "fmt:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
+    "fmt:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged",
+    "commit": "git-cz"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -17,6 +20,8 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -25,15 +30,35 @@
     "@typescript-eslint/parser": "^6.18.1",
     "autoprefixer": "10.4.16",
     "clsx": "^2.1.0",
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.8.0",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tailwindcss": "^3.13.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "postcss": "^8",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "3.4.1",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,md,mdx}": [
+      "prettier --write \"**/*.{ts,tsx,mdx}\" --cache"
+    ],
+    "*.{ts,tsx,mdx}": [
+      "eslint --fix ."
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
+  "engines": {
+    "node": ">=20.10.0"
   }
 }
