@@ -678,7 +678,7 @@ const Home = () => {
                 <span className="text-orange-500">$</span>
 
                 <span className="truncate">
-                  bunx degit rajput-hemant/nextjs-template {"<project-name>"}
+                  bunx degit liaoyio/nextjs-template {"<project-name>"}
                 </span>
 
                 <button
@@ -717,7 +717,7 @@ const Home = () => {
 
             <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <a
-                href="https://github.com/liaoyio"
+                href="https://github.com/new?template_name=nextjs-template&template_owner=liaoyio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex rounded-full border border-zinc-700 px-6 py-3 duration-300 hover:bg-white/10 hover:shadow-md hover:shadow-black"
