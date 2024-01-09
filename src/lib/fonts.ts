@@ -1,28 +1,11 @@
-import {
-  JetBrains_Mono as FontMono,
-  Inter as FontSans,
-  Overpass,
-  Poppins,
-} from "next/font/google";
+import { Poppins } from "next/font/google";
 
-export const fontSans = FontSans({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-export const fontMono = FontMono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-});
-
+/** ------ Google Fonts ------*/
 export const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: "600",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const overpass = Overpass({
-  variable: "--font-overpass",
-  subsets: ["latin"],
-  display: "swap",
-});
+/* -------------- Local Fonts --------------*/
+// ...

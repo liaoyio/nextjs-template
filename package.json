@@ -18,12 +18,14 @@
   "dependencies": {
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@t3-oss/env-nextjs": "^0.7.1",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -38,6 +40,7 @@
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-tailwindcss": "^3.13.1",
+    "geist": "^1.2.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "lucide-react": "^0.307.0",

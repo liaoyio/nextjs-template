@@ -16,7 +16,12 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cx(poppins.className, "scroll-smooth antialiased")}>
+      <body
+        className={cx(
+          poppins.variable,
+          "font-poppins min-h-screen scroll-smooth antialiased"
+        )}
+      >
         <Providers>{children}</Providers>
 
         <TailwindIndicator />

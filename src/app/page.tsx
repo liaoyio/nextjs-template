@@ -7,7 +7,6 @@ import Image from "next/image";
 import {
   Clipboard,
   ClipboardCheck,
-  Copyright,
   FlameKindling,
   Github,
   Mouse,
@@ -651,7 +650,7 @@ const Home = () => {
   };
 
   return (
-    <main className="layout min-h-screen w-full bg-[#141414] bg-fixed text-white selection:bg-zinc-300 selection:text-black">
+    <main className="layout min-h-screen w-full bg-black bg-fixed text-white selection:bg-zinc-300 selection:text-black">
       <section className="container px-4 py-12 md:px-6 md:pt-24 lg:pt-32 xl:pt-48">
         <Image
           src="/nextjs-light.svg"
@@ -664,22 +663,22 @@ const Home = () => {
         <div className="grid items-center gap-6">
           <div className="flex flex-col justify-center space-y-4 text-center">
             <div className="mb-6 space-y-2">
-              <h1 className="bg-gradient-to-r from-white to-gray-500 bg-clip-text text-3xl font-bold tracking-tighter text-transparent sm:text-5xl xl:text-6xl">
+              <h1 className="bg-gradient-to-r from-white to-gray-500 bg-clip-text pb-2 text-3xl font-bold tracking-tighter text-transparent sm:text-5xl xl:text-6xl">
                 Next.js Starter Template
               </h1>
 
-              <p className="mx-auto max-w-3xl text-zinc-200 md:text-xl">
+              <p className="mx-auto max-w-3xl text-sm text-zinc-200 sm:text-base md:text-xl">
                 A Next.js template with TypeScript, TailwindCSS, Lucide Icons
                 and pre-configured with ESLint, Prettier and Husky git hooks.
               </p>
             </div>
 
-            <div className="relative mx-auto rounded-xl border border-zinc-700 p-1 text-zinc-200 shadow-md transition-shadow duration-300 hover:shadow-black">
-              <p className="flex w-full cursor-pointer items-center gap-2 rounded-md bg-white/5 p-3 font-mono hover:bg-white/10">
+            <div className="relative mx-auto max-w-xs rounded-xl border border-zinc-700 p-1 text-zinc-200 shadow-md duration-300 hover:shadow-black sm:max-w-full">
+              <p className="flex w-full cursor-pointer items-center gap-2 rounded-md bg-white/5 px-2 py-3 font-mono hover:bg-white/10">
                 <span className="text-orange-500">$</span>
 
-                <span>
-                  pnpx degit rajput-hemant/nextjs-template {"<project-name>"}
+                <span className="truncate">
+                  bunx degit rajput-hemant/nextjs-template {"<project-name>"}
                 </span>
 
                 <button
@@ -716,9 +715,9 @@ const Home = () => {
               )}
             </div>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <a
-                href="https://github.com/new?template_name=nextjs-template&template_owner=rajput-hemant"
+                href="https://github.com/liaoyio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex rounded-full border border-zinc-700 px-6 py-3 duration-300 hover:bg-white/10 hover:shadow-md hover:shadow-black"
@@ -728,7 +727,7 @@ const Home = () => {
               </a>
 
               <a
-                href="https://github.com/rajput-hemant/nextjs-template"
+                href="https://github.com/liaoyio/nextjs-template"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex rounded-full border border-zinc-700 px-6 py-3 duration-300 hover:bg-white/10 hover:shadow-md hover:shadow-black"
@@ -750,14 +749,14 @@ const Home = () => {
         <Mouse strokeWidth={1} className="h-10 w-10" />
       </button>
 
-      <section ref={featuresRef} className="container mt-10">
-        <h2 className="mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-center text-xl font-bold tracking-tighter text-transparent sm:text-3xl xl:text-4xl">
+      <section ref={featuresRef} className="container mx-auto mt-10">
+        <h2 className="mb-6 bg-gradient-to-r from-white to-gray-500 bg-clip-text text-center text-xl font-bold tracking-tight text-transparent sm:text-3xl xl:text-4xl">
           Features
         </h2>
 
         <div
           ref={cardWrapperRef}
-          className="cards grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          className="cards grid gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3"
         >
           {features.map((f, i) => (
             <a
@@ -766,21 +765,21 @@ const Home = () => {
               href={f.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="card group relative h-48 w-full rounded-xl bg-zinc-700 shadow-md shadow-black outline-none before:absolute before:left-0 before:top-0 before:h-full before:w-full before:rounded-xl before:opacity-0 before:transition-opacity before:duration-500 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:opacity-0 after:transition-opacity after:duration-500 hover:shadow-xl hover:shadow-black hover:before:opacity-100"
+              className="card group relative h-48 w-full rounded-xl bg-zinc-800 shadow-md shadow-black outline-none before:absolute before:left-0 before:top-0 before:h-full before:w-full before:rounded-xl before:opacity-0 before:transition-opacity before:duration-500 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:opacity-0 after:transition-opacity after:duration-500 hover:shadow-xl hover:shadow-black hover:before:opacity-100"
             >
-              <div className="absolute inset-[1px] z-[2] flex flex-col gap-2.5 rounded-xl bg-[#141414] p-2.5">
+              <div className="absolute inset-[1px] z-[2] flex flex-col gap-2.5 rounded-xl bg-black/75 p-2.5">
                 <div className="relative h-full w-full overflow-hidden rounded-md p-4">
                   <div className="mb-3.5 h-14 w-14">{<f.logo />}</div>
 
                   <h3 className="text-xl">
-                    <a className="flex h-full w-full items-center after:absolute after:inset-0">
+                    <div className="flex h-full w-full items-center after:absolute after:inset-0">
                       {f.title}
 
                       <MoveUpRight
                         strokeWidth={0.75}
                         className="ml-1 h-4 w-4 text-white"
                       />
-                    </a>
+                    </div>
                   </h3>
 
                   <p className="mt-2 text-sm text-gray-300 group-hover:text-white">
@@ -793,19 +792,17 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="container mt-10 grid place-items-center pb-4">
+      <footer className="container mt-10 grid place-items-center pb-4 text-neutral-400">
         <span className="flex items-center gap-1">
-          <Copyright className="h-4 w-4" />
-
+          &copy;
           <span>{new Date().getFullYear()}</span>
-
           <a
-            href="https://github.com/rajput-hemant"
+            href="https://github.com/liaoyio"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-300 underline-offset-4 hover:text-green-400 hover:underline"
+            className="underline-offset-4 duration-200 hover:text-white hover:underline"
           >
-            rajput-hemant@github
+            liaoyio@github
           </a>
         </span>
       </footer>
