@@ -18,11 +18,8 @@ const config = {
       },
     },
     fontFamily: {
-      sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-      mono: ["var(--font-geist-mono)", ...fontFamily.sans],
       inter: ["var(--font-inter)", ...fontFamily.sans],
       poppins: ["var(--font-poppins)", ...fontFamily.sans],
-      overpass: ["var(--font-overpass)", ...fontFamily.sans],
     },
   },
   plugins: [],
