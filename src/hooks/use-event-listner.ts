@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import type { RefObject} from "react";
+import type { RefObject } from "react";
 import { useEffect, useRef } from "react";
 
 import { useIsomorphicLayoutEffect } from "./use-isomorphic-layout-effect";

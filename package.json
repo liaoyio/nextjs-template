@@ -14,7 +14,7 @@
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
     "commit": "git-cz",
-    "analyze": "cross-env ANALYZE=true bun build"
+    "analyze": "cross-env ANALYZE=true bun run build"
   },
   "dependencies": {
     "next": "14.0.4",
