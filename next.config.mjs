@@ -1,13 +1,13 @@
-// This is validation for the environment variables early in the build process.
-// import "./src/lib/env.mjs";
+import { env } from "./src/lib/env.mjs"
+import withPlugins from "next-compose-plugins"
+import withBundleAnalyzer from "@next/bundle-analyzer"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [],
-    // unoptimized: true,
-  },
-  experimental: {}
+  reactStrictMode: true,
+  experimental: { instrumentationHook: true }
 };
 
-export default nextConfig;
+const config = withPlugins( [ [withBundleAnalyzer({ enabled: env.ANALYZE })] ], nextConfig)
+
+export default config;
