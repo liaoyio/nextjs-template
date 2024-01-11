@@ -1,13 +1,12 @@
 "use client";
 
-import * as React from "react";
-import AntdRegistry from "components/antd/AntdRegistry";
+import type { ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
 import type { ThemeProviderProps } from "next-themes/dist/types";
 
 type Props = {
   theme?: ThemeProviderProps;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 export default function Providers({ children, theme }: Props) {
@@ -19,7 +18,7 @@ export default function Providers({ children, theme }: Props) {
       disableTransitionOnChange
       {...theme}
     >
-      <AntdRegistry>{children}</AntdRegistry>
+      {children}
     </ThemeProvider>
   );
 }

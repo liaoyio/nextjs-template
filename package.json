@@ -18,6 +18,7 @@
     "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
+    "@ant-design/nextjs-registry": "^1.0.0",
     "antd": "^5.12.8",
     "next": "14.0.4",
     "react": "^18",
@@ -25,7 +26,6 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@ant-design/cssinjs": "^1.18.2",
     "@ant-design/icons": "^5.2.6",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",

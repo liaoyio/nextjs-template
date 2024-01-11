@@ -1,37 +1,18 @@
-"use client";
-
 import React from "react";
-import { useServerInsertedHTML } from "next/navigation";
-import { createCache, extractStyle, StyleProvider } from "@ant-design/cssinjs";
-import type Entity from "@ant-design/cssinjs/es/Cache";
+// App Router 使用 Antd: https://ant-design.antgroup.com/docs/react/use-with-next-cn#%E4%BD%BF%E7%94%A8-app-router
+import { AntdRegistry as AntDesignProvider } from "@ant-design/nextjs-registry";
 import { ConfigProvider } from "antd";
 import en_US from "antd/locale/en_US";
 
 import theme from "./themeConfig";
 
 const AntdRegistry = ({ children }: React.PropsWithChildren) => {
-  const isServerInserted = React.useRef<boolean>(false);
-  const cache = React.useMemo<Entity>(() => createCache(), []);
-
-  useServerInsertedHTML(() => {
-    // 避免 css 重复插入
-    if (isServerInserted.current) {
-      return;
-    }
-    isServerInserted.current = true;
-    return (
-      <style
-        id="antd"
-        dangerouslySetInnerHTML={{ __html: extractStyle(cache, true) }}
-      />
-    );
-  });
   return (
-    <StyleProvider cache={cache}>
+    <AntDesignProvider>
       <ConfigProvider locale={en_US} theme={theme}>
         {children}
       </ConfigProvider>
-    </StyleProvider>
+    </AntDesignProvider>
   );
 };
 
