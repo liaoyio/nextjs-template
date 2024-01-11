@@ -15,7 +15,7 @@
     "lint:lint-staged": "lint-staged",
     "commit": "git-cz",
     "analyze": "cross-env ANALYZE=true bun run build",
-    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
+    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|unocss.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.0",
@@ -30,6 +30,7 @@
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@iconify-json/lucide": "^1.1.153",
     "@next/bundle-analyzer": "^14.0.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
@@ -44,6 +45,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
+    "@unocss/postcss": "^0.58.3",
     "autoprefixer": "10.4.16",
     "clsx": "^2.1.0",
     "commitizen": "^4.3.0",
@@ -52,7 +54,6 @@
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-tailwindcss": "^3.13.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "lucide-react": "^0.307.0",
@@ -60,10 +61,9 @@
     "next-themes": "^0.2.1",
     "postcss": "^8",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss": "3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "unocss": "^0.58.3"
   },
   "lint-staged": {
     "*.{ts,tsx,md,mdx}": [
