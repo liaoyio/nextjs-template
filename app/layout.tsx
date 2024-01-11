@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-
-import { poppins } from "@/lib/fonts";
-import Providers from "@/components/providers";
-import TailwindIndicator from "@/components/tailwind-indicator";
+import Providers from "components/providers";
+import TailwindIndicator from "components/tailwind-indicator";
+import { poppins } from "lib/fonts";
 
 import "@/styles/globals.css";
 
-import cx from "@/lib/utils/cx";
+import cx from "lib/utils/cx";
 
 export const metadata: Metadata = {
   title: "Next.js + TypeScript Starter",
@@ -23,7 +22,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         )}
       >
         <Providers>{children}</Providers>
-
         <TailwindIndicator />
       </body>
     </html>

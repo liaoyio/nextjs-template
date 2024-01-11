@@ -1,4 +1,4 @@
-import { env } from "./src/lib/env.mjs"
+import { env } from "./lib/env.mjs"
 import withPlugins from "next-compose-plugins"
 import withBundleAnalyzer from "@next/bundle-analyzer"
 
