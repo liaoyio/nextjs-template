@@ -27,9 +27,9 @@
 ## Getting Started
 
 ```bash
-bun create next-app -e "https://github.com/rajput-hemant/nextjs-template" <project-name>
+bun create next-app -e "https://github.com/liaoyio/nextjs-template" <project-name>
 
-npx create-next-app -e "https://github.com/rajput-hemant/nextjs-template" <project-name>
+npx create-next-app -e "https://github.com/liaoyio/nextjs-template" <project-name>
 ```
 
 <p align="center" style="font-weight: bold;">OR</p>
@@ -43,7 +43,7 @@ bun i -g degit || pnpm i -g degit || yarn global add degit || npm i -g degit
 **Create a new project from this template**
 
 ```bash
-degit rajput-hemant/nextjs-template <project-name>
+degit liaoyio/nextjs-template <project-name>
 cd <project-name>
 ```
 
