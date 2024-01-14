@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { UserProvider } from "@auth0/nextjs-auth0/client";
 import Providers from "components/providers";
 import TailwindIndicator from "components/tailwind-indicator";
 import { poppins } from "lib/fonts";
@@ -6,6 +7,8 @@ import { poppins } from "lib/fonts";
 import "@/styles/globals.css";
 
 import cx from "lib/utils/cx";
+
+import NavBar from "@/components/auth0/navbar";
 
 export const metadata: Metadata = {
   title: "Next.js + TypeScript Starter",
@@ -21,8 +24,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           "font-poppins min-h-screen scroll-smooth antialiased"
         )}
       >
-        <Providers>{children}</Providers>
-        <TailwindIndicator />
+        <UserProvider>
+          <Providers>
+            <NavBar />
+            {children}
+          </Providers>
+          <TailwindIndicator />
+        </UserProvider>
       </body>
     </html>
   );

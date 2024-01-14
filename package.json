@@ -27,6 +27,7 @@
   "devDependencies": {
     "@ant-design/cssinjs": "^1.18.2",
     "@ant-design/icons": "^5.2.6",
+    "@auth0/nextjs-auth0": "^3.5.0",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
