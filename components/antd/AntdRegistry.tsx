@@ -27,7 +27,7 @@ const AntdRegistry = ({ children }: React.PropsWithChildren) => {
     );
   });
   return (
-    <StyleProvider cache={cache}>
+    <StyleProvider cache={cache} hashPriority="high">
       <ConfigProvider locale={en_US} theme={theme}>
         {children}
       </ConfigProvider>
