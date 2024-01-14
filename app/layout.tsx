@@ -3,8 +3,6 @@ import Providers from "components/providers";
 import TailwindIndicator from "components/tailwind-indicator";
 import { poppins } from "lib/fonts";
 
-import AntdRegistry from "@/components/antd/AntdRegistry";
-
 import "@/styles/globals.css";
 
 import cx from "lib/utils/cx";
@@ -23,9 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           "font-poppins min-h-screen scroll-smooth antialiased"
         )}
       >
-        <AntdRegistry>
-          <Providers>{children}</Providers>
-        </AntdRegistry>
+        <Providers>{children}</Providers>
         <TailwindIndicator />
       </body>
     </html>
